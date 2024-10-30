@@ -20,7 +20,7 @@ def blackjack():
                     print("ваш счёт: ", p_h)
                 if p_h > 21:
                     print ("перебор")
-                    break
+                    return
                 if p_h == 21:
                     print ("блекджек") 
                     bj_i = "stand"
@@ -66,13 +66,15 @@ def roulette():
         if rl_bet > bal:
             print("вам не хватает денег")
         else:
-            print("выберите на что вы ставите: number/color")
+            print('выберите на что вы ставите, для этого пропишите "number" или "color"')
             rl_i = 1
             while rl_i == 1:
                 rl_b = input()
                 if rl_b == "number":
+                    print("вы выбрали ставку на число, напишите число от 1 до 36 включительно")
                     rl_i = 0
                 elif rl_b == "color":
+                    print("вы выбрали ставку на цвет, выберите один из цветов: red/black")
                     rl_i = 0
             if rl_b == "number":
                 rl_n_check = 1
@@ -145,6 +147,7 @@ def slots():
             print("вам не хватает денег")
         else:
             sl_w = 1
+            print('чтобы крутить слоты введите "spin"')
             while sl_w == 1:
                 sl_s = input()
                 if sl_s == "spin":
