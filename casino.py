@@ -20,6 +20,7 @@ def blackjack():
                     print("ваш счёт: ", p_h)
                 if p_h > 21:
                     print ("перебор")
+                    bal -= bj_bet
                     return
                 if p_h == 21:
                     print ("блекджек") 
